@@ -1,4 +1,6 @@
-﻿namespace Testing_Grounds
+﻿using System.Threading.Channels;
+
+namespace Testing_Grounds
 {
     internal class Program
     {
@@ -6,6 +8,15 @@
         {
             Console.WriteLine("Enter Your Name");
             string name = Console.ReadLine();
+            int num;
+            while (int.TryParse(name, out num))
+            {
+                if (int.TryParse(name, out num))
+                {
+                    Console.WriteLine("Invalid Name , Try Again");
+                    name = Console.ReadLine();
+                }
+            }
 
             Console.WriteLine("Enter Your Age");
             int age = int.Parse(Console.ReadLine());
